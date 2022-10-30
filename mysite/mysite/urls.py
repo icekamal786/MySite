@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 
 from django.views.static import serve
 from django.views.static import serve
-from django.conf.urls import url
+from django.conf.urls import include
+# from django.conf.urls import path
 
 
 urlpatterns = [
@@ -32,7 +33,7 @@ urlpatterns = [
     path('photos', views.photos, name='photos.html'),
     path('saveform', views.saveform, name='saveform'),
     path('mywork', views.mywork, name='mywork.html'),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    path(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
