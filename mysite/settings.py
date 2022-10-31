@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hqa57@b@@!3u#uh-8#12idz9)yycbyp=h&hh_5di11#eqer3o='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','mysitecv.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://mysitecv.herokuapp.com/','mysitecv.herokuapp.com']
 
 
 # Application definition
