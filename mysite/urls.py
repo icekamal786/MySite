@@ -29,7 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', views.home, name='Home.html'),
     path('contact', views.contact, name='contact.html'),
-    path('/', views.index, name='index.html'),
+    path('', views.index, name='index.html'),
     path('photos', views.photos, name='photos.html'),
     path('saveform', views.saveform, name='saveform'),
     path('mywork', views.mywork, name='mywork.html'),
