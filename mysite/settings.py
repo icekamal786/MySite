@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-hqa57@b@@!3u#uh-8#12idz9)yycbyp=h&hh_5di11#eqer3o=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com','herokudjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 'django.contrib.sessions',
 'django.contrib.messages',
 'django.contrib.staticfiles',
-# 'herokuapp',
+'herokuapp',
 ]
 
 MIDDLEWARE = [
@@ -129,8 +129,9 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'mysite/static/')
+   os.path.join(BASE_DIR, 'static')
 ]
+django_heroku.settings(locals())
 
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
