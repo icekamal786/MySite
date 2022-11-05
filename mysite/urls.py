@@ -33,7 +33,7 @@ urlpatterns = [
     path('photos', views.photos, name='photos.html'),
     path('saveform', views.saveform, name='saveform'),
     path('mywork', views.mywork, name='mywork.html'),
-    path(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    # path(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    # path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
